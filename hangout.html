@@ -7,6 +7,8 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.js"></script>
 		<script src = "js/controller.js"></script>
 		<link type = "text/css" rel = "stylesheet" href= "css/style.css">
+        <link type = "text/css" rel = "stylesheet" href= "css/tab.css">
+        <link type = "text/css" rel = "stylesheet" href= "css/tooltips.css">
 	</head>
 	<body ng-app = "mainApp">
 		<div id = "background-div">
@@ -15,41 +17,206 @@
 					<img src = "images/ham-icon.png">
 				</div>
 				<div class = "logo">
-					<span class = "google-logo">Google</span><span class = "hangouts-logo"> Hangouts</span>
+					<span class = "google-logo">Lalinda</span><span class = "hangouts-logo"> Sampath</span>
 				</div>
 				<div class = "profile-data">
 				</div>
 			</div>
 			<div class = "body" ng-controller = "app">
 				<div class = "column1">
-					<div class = "tab1">
-						<a href = "#/tab1"><img src = "images/people-icon.png"></a>
+					<div class = "tab1 grow">
+						<a href = "#/tab1" class = "tooltip">
+                            <img ng-src="{{ imageUrlProfile }}">
+                            <span>
+                                <strong>Profile</strong><br />
+                            </span>
+                        </a>
 					</div>
-					<div class = "tab2">
-						<a href = "#/tab2"><img src = "images/chat-icon.png"></a>
+					<div class = "tab2 grow">
+						<a href = "#/tab2" class = "tooltip">
+                            <img src = "{{ imageUrlWork }}">
+                            <span>
+                                <strong>Experience</strong><br />
+                            </span>
+                        </a>
 					</div>
-					<div class = "tab3">
-						<a href = "#/tab3"><img src = "images/phone-icon.png"></a>
+					<div class = "tab3 grow">
+						<a href = "#/tab3" class = "tooltip">
+                            <img src = "{{ imageUrlEdu }}">
+                            <span>
+                                <strong>Education</strong><br />
+                            </span>
+                        </a>
 					</div>
-					<div class = "tab4">
-						<a href = "#/tab4"><img src = "images/other-icon.png"></a>
+					<div class = "tab4 grow">
+						<a href = "#/tab4" class = "tooltip">
+                            <img src = "{{ imageUrlProject }}">
+                            <span>
+                                <strong>Projects</strong><br />
+                            </span>
+                        </a>
+					</div>
+                    <div class = "tab5 grow">
+						<a href = "#/tab5" class = "tooltip">
+                            <img src = "{{ imageUrlContact }}">
+                            <span>
+                                <strong>Contact Info</strong><br />
+                            </span>
+                        </a>
 					</div>
 				</div>
 				<div class = "column2">
-					<ng-view>Loading...</ng-view>
+					<ng-view> Loading.. </ng-view>
 				</div>
+                <script type="text/ng-template" id = "openingTab.html">
+                    <div class = "openingTab">
+                        <div class = "image-openingTab">
+                            <img src = "images/me.png">
+                        </div>
+                    </div>
+				</script>
 				<script type="text/ng-template" id = "tab1.html">
-					<span>Profile</span>
+                    <div class = "tab-common">
+                        <span class = "tab-title">Profile</span>
+                        <p class = "profile-description">I’m a passionate, responsible and committed engineer, who enjoys challenges and        achieving goals. Interested in software Research and Developments with new technologies and algorithms. 
+                        </p>
+                        <p class = "profile-description">Have ability to work in a team environment or individually and meet deadlines. Good Communication Skills and Presentation Skills. A quick learner of new technologies. Proficient in Understanding Business Requirement and Analyzing and Designing accordingly. Experience in Object Oriented Analyzing, Design, and Developing and working Agile Methodologies. Have vast experience in managing work groups and achieving targets.
+                        </p>
+                        <p class = "profile-description">
+                            <u>Technical Skills</u>
+                            <div class = "skills">
+                                <div class = "tech-skills">
+                                    <span> Java </span>
+                                </div>
+                                <div class = "tech-skills">
+                                    <span> C# </span>
+                                </div>
+                                <div class = "tech-skills">
+                                    <span> C++ </span>
+                                </div>
+                                <div class = "tech-skills">
+                                    <span> NET Framework 3.5/4.0/4.5 </span>
+                                </div>
+                                <div class = "tech-skills">
+                                    <span> MVC 3/4 </span>
+                                </div>
+                                <div class = "tech-skills">
+                                    <span> Entity Framework 4.1 </span>
+                                </div>
+                                <div class = "tech-skills">
+                                    <span> XML </span>
+                                </div>
+                                <div class = "tech-skills">
+                                    <span> HTML5 </span>
+                                </div>
+                                <div class = "tech-skills">
+                                    <span> JQuery </span>
+                                </div>
+                                <div class = "tech-skills">
+                                    <span> AJAX </span>
+                                </div>
+                                <div class = "tech-skills">
+                                    <span> Java scripts </span>
+                                </div>
+                                <div class = "tech-skills">
+                                    <span> AngularJS 2</span>
+                                </div>
+                                <div class = "tech-skills">
+                                    <span> NodeJS </span>
+                                </div>
+                                <div class = "tech-skills">
+                                    <span> CSS3 </span>
+                                </div>
+                                <div class = "tech-skills">
+                                    <span> MySql </span>
+                                </div>
+                                <div class = "tech-skills">
+                                    <span> AI </span>
+                                </div>
+                                <div class = "tech-skills">
+                                    <span> SQL Server 2008/R2/2012 </span>
+                                </div>
+                                <div class = "tech-skills">
+                                    <span> Machine Learning </span>
+                                </div>
+                                <div class = "tech-skills">
+                                    <span> JSON </span>
+                                </div>
+                                <div class = "tech-skills">
+                                    <span> Bootstrap3 </span>
+                                </div>
+                                <div class = "tech-skills">
+                                    <span> Crystal Reports </span>
+                                </div>
+                                <!--ul class = "profile-description">
+                                    <li>C#, VB.NET, Java, Visual C++, C </li>
+                                    <li>Web, Windows, Windows Mobile, Android </li>
+                                    <li>NET Framework 3.5/4.0/4.5 </li>
+                                    <li>MVC 3/4, Entity Framework 4.1, Linq, UML, Design Patterns, WPF, Web Services, XML, HTML5, JQuery, AJAX, Java scripts, CSS </li>
+                                    <li>SQL Server 2005/2008/R2/2012.2014, PLSQL, MySql </li>
+                                    <li>Image Processing</li>
+                                    <li>Natural Language Processing</li>
+                                    <li>Data Mining</li>
+                                </ul-->
+                            </div>
+                        </p>
+                    </div>
 				</script>
 				<script type="text/ng-template" id = "tab2.html">
-					<h1>Tab2</h1>
+					<div class = "tab-common">
+                        <span class = "tab-title">Experience</span> <br/><br/>
+                        <span class = "row">
+                            <span class= "designation-exp"><b>Associate Software Engineer - Specialist (UI)</b></span> <br/>
+                            <span class= "location-exp">Virtusa</span> <br/>
+                            <span class= "duration-exp"><I>December 2015 – Present (4 months)</I></span> <br/>
+                        </span>
+                        <br/> <br/>
+                        <span class = "row">
+                            <span class= "designation-exp"><b>Project Team Member</b></span> <br/>
+                            <span class= "location-exp">AIESEC in University of Sri Jayawardanepura</span> <br/>
+                            <span class= "duration-exp"><I>November 2014 – Present</I></span> <br/>
+                        </span>
+                    </div>
+				</script>
+                <script type="text/ng-template" id = "tab3.html">
+					<div class = "tab-common">
+                        <span class = "tab-title">Education</span> <br/><br/>
+                        <span class = "row">
+                            <span class= "uni-edu"><b>University College Dublin</b></span>  <br/>
+                            <span class= "location-edu">BSc. in Management Information Systems</span> <br/>
+                            <span class= "award-edu">First Class Honours</span> <br/>
+                            <span class= "gpa-edu">GPA : 3.72</span> <br/>
+                            <span class= "duration-edu"><I>December 2015 – Present (4 months)</I></span>
+                        </span>
+                        <br/><br/>
+                        <span class = "row">
+                            <span class= "uni-edu"><b>University of Sri Jayewardenepura</b></span> <br/>
+                            <span class= "location-edu">Bachelor of Science (BSc), Computer Science, Physics, Mathematics</span> <br/>
+                            <span class= "gpa-edu">Current Compute Science GPA : 3.2</span> <br/>
+                            <span class= "duration-edu"><I>2012 – 2015</I></span>
+                        </span>
+                        <br/><br/>
+                        <span class = "row">
+                            <span class= "uni-edu"><b>National Institute of Business Management</b></span> <br/>
+                            <span class= "location-edu">Higher Diploma in Computer Based Information Systems, Computer Science</span> <br/>
+                            <span class= "award-edu">First Class Honours</span> <br/>
+                            <span class= "duration-edu"><I>2012 – 2013</I></span> 
+                        </span>
+                        <br/><br/>
+                        <span class = "row">
+                            <span class= "uni-edu"><b>National Institute of Business Management</b></span> <br/>
+                            <span class= "location-edu">Diploma in Computer System Designs, Computer Science</span> <br/>
+                            <span class= "award-edu">Distinction</span> <br/>
+                            <span class= "duration-edu"><I>2012 – 2013</I></span> 
+                        </span>
+                    </div>
 				</script>
 				<div class = "column3">
-					<div classs = "user-greet">
-						<span class = "user-greet-span">Hi, Lalinda</span>
+					<div class = "user-greet">
+						<span class = "user-greet-span">Hi, Guest</span>
 					</div>
 					<div class = "det">
-						<span class = "det-span">Get started by calling or messaging a friend below</span>
+						<span class = "det-span">Welcome to my personal website</span>
 					</div>
 					<div class = "functional-area">
 						<div class = "video-call">
