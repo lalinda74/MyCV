@@ -1,0 +1,53 @@
+a.tooltip 
+{
+    outline:none; 
+}
+            
+a.tooltip strong 
+{
+    line-height:20px;
+}
+
+a.tooltip:hover 
+{
+    text-decoration:none;
+} 
+
+a.tooltip span 
+{
+    z-index: 10; 
+    display: none; 
+    padding: 0px 2px;
+    margin-top: 10px; 
+    margin-left: -15px;
+    width: 60px; 
+    line-height: 16px;
+    font-family: Arial;
+    font-size: 11px;
+    text-align: center;
+}
+            
+a.tooltip:hover span 
+{
+    display:inline; 
+    position:absolute; 
+    color: white;
+    /*border:1px solid #DCA;*/ 
+    background:#777673;
+}
+
+.callout 
+{
+    z-index: 20;
+    position: absolute;
+    top: 30px;
+    border: 0;
+    left: -12px;
+}
+
+            /*CSS3 extras*/
+a.tooltip span
+{
+    border-radius:4px;
+    /*box-shadow: 5px 5px 8px #CCC;*/
+}
